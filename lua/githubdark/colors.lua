@@ -1,11 +1,11 @@
-local util = require("tokyonight.util")
+local util = require("githubdark.util")
 
 local M = {}
 
 ---@param config Config
 ---@return ColorScheme
 function M.setup(config)
-  config = config or require("tokyonight.config")
+  config = config or require("githubdark.config")
 
   -- Color Palette
   ---@class ColorScheme
@@ -13,24 +13,25 @@ function M.setup(config)
 
   colors = {
     none = "NONE",
-    bg_dark = "#24292e",
+    bg_dark = "#2b3036",
     bg = "#24292e",
     bg_highlight = "#292e42",
     terminal_black = "#414868",
     fg = "#e1e4e8",
     fg_dark = "#d1d5da",
     fg_gutter = "#444d56",
-    dark3 = "#545c7e",
+    dark3 = "#545c7e", -- TODO
     comment = "#959da5",
-    dark5 = "#737aa2",
+    dark5 = "#737aa2", -- TODO
+    cyan = "#7dcfff", -- TODO
     blue0 = "#3d59a1",
     blue = "#b392f0",
-    cyan = "#7dcfff",
     blue1 = "#9ecbff",
     blue2 = "#79b8ff",
+    blue3 = "#22374b",
     blue5 = "#89ddff",
-    blue6 = "#B4F9F8",
-    blue7 = "#394b70",
+    blue6 = "#B4F9F8", -- TODO
+    blue7 = "#394b70", -- TODO
     magenta = "#bb9af7",
     magenta2 = "#ff007c",
     purple = "#9d7cd8",
@@ -52,10 +53,10 @@ function M.setup(config)
   util.day_brightness = config.dayBrightness
 
   colors.diff = {
-    add = util.darken(colors.green2, 0.15),
-    delete = util.darken(colors.red1, 0.15),
-    change = util.darken(colors.blue7, 0.15),
-    text = colors.blue7,
+    add = util.darken(colors.green, 0.15),
+    delete = util.darken(colors.red, 0.35),
+    change = util.darken(colors.blue, 0.15),
+    text = util.darken(colors.blue, 0.5)
   }
 
   colors.gitSigns = {
@@ -66,7 +67,7 @@ function M.setup(config)
 
   colors.git.ignore = colors.dark3
   colors.black = util.darken(colors.bg, 0.8, "#000000")
-  colors.border_highlight = colors.blue0
+  colors.border_highlight = colors.fg_gutter
   colors.border = colors.black
 
   -- Popups and statusline always get a dark background
@@ -77,8 +78,8 @@ function M.setup(config)
   colors.bg_sidebar = config.darkSidebar and colors.bg_dark or colors.bg
   colors.bg_float = config.darkFloat and colors.bg_dark or colors.bg
 
-  colors.bg_visual = util.darken(colors.blue0, 0.7)
-  colors.bg_search = colors.blue0
+  colors.bg_visual = colors.blue3
+  colors.bg_search = util.darken(colors.blue0, 0.75)
   colors.fg_sidebar = colors.fg_dark
 
   colors.error = colors.red1

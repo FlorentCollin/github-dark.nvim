@@ -1,4 +1,4 @@
-local hsluv = require("tokyonight.hsluv")
+local hsluv = require("githubdark.hsluv")
 
 local util = {}
 
@@ -83,7 +83,7 @@ function util.getColor(color)
   return util.colorCache[color]
 end
 
--- local ns = vim.api.nvim_create_namespace("tokyonight")
+-- local ns = vim.api.nvim_create_namespace("githubdark")
 function util.highlight(group, color)
   if color.fg then
     util.colorsUsed[color.fg] = true
@@ -116,7 +116,7 @@ function util.highlight(group, color)
 end
 
 function util.debug(colors)
-  colors = colors or require("tokyonight.colors")
+  colors = colors or require("githubdark.colors")
   -- Dump unused colors
   for name, color in pairs(colors) do
     if type(color) == "table" then
@@ -131,7 +131,7 @@ end
 
 --- Delete the autocmds when the theme changes to something else
 function util.onColorScheme()
-  if vim.g.colors_name ~= "tokyonight" then
+  if vim.g.colors_name ~= "githubdark" then
     vim.cmd([[autocmd! TokyoNight]])
     vim.cmd([[augroup! TokyoNight]])
   end
@@ -141,9 +141,9 @@ end
 function util.autocmds(config)
   vim.cmd([[augroup TokyoNight]])
   vim.cmd([[  autocmd!]])
-  vim.cmd([[  autocmd ColorScheme * lua require("tokyonight.util").onColorScheme()]])
+  vim.cmd([[  autocmd ColorScheme * lua require("githubdark.util").onColorScheme()]])
   if config.dev then
-    vim.cmd([[  autocmd BufWritePost */lua/tokyonight/** nested colorscheme tokyonight]])
+    vim.cmd([[  autocmd BufWritePost */lua/githubdark/** nested colorscheme githubdark]])
   end
   for _, sidebar in ipairs(config.sidebars) do
     if sidebar == "terminal" then
@@ -231,7 +231,7 @@ function util.load(theme)
   -- end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "tokyonight"
+  vim.g.colors_name = "githubdark"
   -- vim.api.nvim__set_hl_ns(ns)
   -- load base theme
   util.syntax(theme.base)

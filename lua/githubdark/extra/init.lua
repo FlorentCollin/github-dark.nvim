@@ -1,6 +1,6 @@
 package.path = "./lua/?/init.lua;./lua/?.lua"
 
-local config = require("tokyonight.config")
+local config = require("githubdark.config")
 
 local function write(str, fileName)
 	print("[write] extra/" .. fileName)
@@ -22,12 +22,12 @@ local extras = {
 local styles = { "storm", "night", "day" }
 
 for extra, ext in pairs(extras) do
-	local plugin = require("tokyonight.extra." .. extra)
+	local plugin = require("githubdark.extra." .. extra)
 	for _, style in pairs(styles) do
 		config.style = style
-		config = config or require("tokyonight.config")
+		config = config or require("githubdark.config")
 		config.transform_colors = true
-		local colors = require("tokyonight.colors").setup(config)
-		write(plugin.generate(colors), extra .. "_tokyonight_" .. style .. "." .. ext)
+		local colors = require("githubdark.colors").setup(config)
+		write(plugin.generate(colors), extra .. "_githubdark_" .. style .. "." .. ext)
 	end
 end

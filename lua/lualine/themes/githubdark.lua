@@ -1,43 +1,43 @@
-local config = require("tokyonight.config")
-local colors = require("tokyonight.colors").setup(config)
-local util = require("tokyonight.util")
+local config = require("githubdark.config")
+local colors = require("githubdark.colors").setup(config)
+local util = require("githubdark.util")
 
-local tokyonight = {}
+local githubdark = {}
 
-tokyonight.normal = {
+githubdark.normal = {
   a = { bg = colors.blue, fg = colors.black },
   b = { bg = colors.fg_gutter, fg = colors.blue },
   c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
 }
 
-tokyonight.insert = {
+githubdark.insert = {
   a = { bg = colors.green, fg = colors.black },
   b = { bg = colors.fg_gutter, fg = colors.green },
 }
 
-tokyonight.command = {
+githubdark.command = {
   a = { bg = colors.yellow, fg = colors.black },
   b = { bg = colors.fg_gutter, fg = colors.yellow },
 }
 
-tokyonight.visual = {
+githubdark.visual = {
   a = { bg = colors.magenta, fg = colors.black },
   b = { bg = colors.fg_gutter, fg = colors.magenta },
 }
 
-tokyonight.replace = {
+githubdark.replace = {
   a = { bg = colors.red, fg = colors.black },
   b = { bg = colors.fg_gutter, fg = colors.red },
 }
 
-tokyonight.inactive = {
+githubdark.inactive = {
   a = { bg = colors.bg_statusline, fg = colors.blue },
   b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
   c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
 }
 
 if vim.o.background == "light" then
-  for _, mode in pairs(tokyonight) do
+  for _, mode in pairs(githubdark) do
     for _, section in pairs(mode) do
       if section.bg then
         section.bg = util.getColor(section.bg)
@@ -49,10 +49,10 @@ if vim.o.background == "light" then
   end
 end
 
-if vim.g.tokyonight_lualine_bold then
-  for _, mode in pairs(tokyonight) do
+if vim.g.githubdark_lualine_bold then
+  for _, mode in pairs(githubdark) do
     mode.a.gui = "bold"
   end
 end
 
-return tokyonight
+return githubdark

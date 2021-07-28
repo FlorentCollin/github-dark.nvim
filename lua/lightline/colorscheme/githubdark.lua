@@ -1,10 +1,10 @@
-local config = require("tokyonight.config")
-local colors = require("tokyonight.colors").setup(config)
-local util = require("tokyonight.util")
+local config = require("githubdark.config")
+local colors = require("githubdark.colors").setup(config)
+local util = require("githubdark.util")
 
-local tokyonight = {}
+local githubdark = {}
 
-tokyonight.normal = {
+githubdark.normal = {
   left = {{ colors.black, colors.blue }, { colors.blue, colors.bg }},
   middle = {{ colors.blue, colors.fg_gutter }},
   right = {{ colors.fg_sidebar, colors.bg_statusline }, { colors.blue, colors.bg }},
@@ -12,25 +12,25 @@ tokyonight.normal = {
   warning = {{ colors.black, colors.warning }},
 }
 
-tokyonight.insert = {
+githubdark.insert = {
   left = {{ colors.black, colors.green }, { colors.blue, colors.bg }},
 }
 
-tokyonight.visual = {
+githubdark.visual = {
   left = {{ colors.black, colors.magenta }, { colors.blue, colors.bg }},
 }
 
-tokyonight.replace = {
+githubdark.replace = {
   left = {{ colors.black, colors.red }, { colors.blue, colors.bg }},
 }
 
-tokyonight.inactive = {
+githubdark.inactive = {
   left = {{ colors.blue, colors.bg_statusline }, {colors.dark3, colors.bg }},
   middle = {{ colors.fg_gutter, colors.bg_statusline }},
   right = {{ colors.fg_gutter, colors.bg_statusline }, {colors.dark3, colors.bg }},
 }
 
-tokyonight.tabline = {
+githubdark.tabline = {
   left = {{ colors.dark3, colors.bg_highlight }, {colors.dark3, colors.bg }},
   middle = {{ colors.fg_gutter, colors.bg_statusline }},
   right = {{ colors.fg_gutter, colors.bg_statusline }, {colors.dark3, colors.bg }},
@@ -38,7 +38,7 @@ tokyonight.tabline = {
 }
 
 if vim.o.background == "light" then
-  for _, mode in pairs(tokyonight) do
+  for _, mode in pairs(githubdark) do
     for _, section in pairs(mode) do
       for _, subsection in pairs(section) do
         subsection[1] = util.getColor(subsection[1])
@@ -48,4 +48,4 @@ if vim.o.background == "light" then
   end
 end
 
-return tokyonight
+return githubdark

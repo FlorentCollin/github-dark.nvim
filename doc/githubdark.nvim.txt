@@ -1,29 +1,28 @@
 ==============================================================================
-1. 🏙 Tokyo Night                         *tokyonight.nvim-🏙-tokyo-night*
+1. 🏙Github Dark                        *githubdark.nvim*
 
 
-A dark and light Neovim theme written in Lua ported from the Visual Studio Code [TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme)
-theme. Includes extra themes for Kitty, Alacritty, iTerm and Fish.
+TODO
 ==============================================================================
-2. Storm                                               *tokyonight.nvim-storm*
+2. Storm                                               *githubdark.nvim-storm*
 
 
 
 ![image](https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png)
 ==============================================================================
-3. Night                                               *tokyonight.nvim-night*
+3. Night                                               *githubdark.nvim-night*
 
 
 
 ![image](https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png)
 ==============================================================================
-4. Day                                                   *tokyonight.nvim-day*
+4. Day                                                   *githubdark.nvim-day*
 
 
 
 ![image](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
 ==============================================================================
-5. ✨ Features                                 *tokyonight.nvim-✨-features*
+5. ✨ Features                                 *githubdark.nvim-✨-features*
 
 
 - supports the latest Neovim 5.0 features like TreeSitter and LSP
@@ -33,7 +32,7 @@ theme. Includes extra themes for Kitty, Alacritty, iTerm and Fish.
 - color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include), [Alacritty](https://github.com/alacritty/alacritty) and [Fish Shell](https://fishshell.com/)
 - **lualine** theme
 ==============================================================================
-6. Plugin Support                             *tokyonight.nvim-plugin-support*
+6. Plugin Support                             *githubdark.nvim-plugin-support*
 
 
 - [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
@@ -54,79 +53,79 @@ theme. Includes extra themes for Kitty, Alacritty, iTerm and Fish.
 - [vim-sneak](https://github.com/justinmk/vim-sneak)
 - [Fern](https://github.com/lambdalisue/fern.vim)
 ==============================================================================
-7. ⚡️ Requirements                   *tokyonight.nvim-⚡️-requirements*
+7. ⚡️ Requirements                   *githubdark.nvim-⚡️-requirements*
 
 
 - Neovim >= 0.5.0
 ==============================================================================
-8. 📦 Installation                       *tokyonight.nvim-📦-installation*
+8. 📦 Installation                       *githubdark.nvim-📦-installation*
 
 
 Install the theme with your preferred package manager:
  [vim-plug](https://github.com/junegunn/vim-plug)
 
 >
-    Plug 'folke/tokyonight.nvim'
+    Plug 'folke/githubdark.nvim'
 <
 
 
  [packer](https://github.com/wbthomason/packer.nvim)
 
 >
-    use 'folke/tokyonight.nvim'
+    use 'folke/githubdark.nvim'
 <
 
 
 ==============================================================================
-9. 🚀 Usage                                     *tokyonight.nvim-🚀-usage*
+9. 🚀 Usage                                     *githubdark.nvim-🚀-usage*
 
 
 Enable the colorscheme:
 
 >
     " Vim Script    
-    colorscheme tokyonight
+    colorscheme githubdark
 <
 
 
 
 >
     -- Lua    
-    vim.cmd[[colorscheme tokyonight]]
+    vim.cmd[[colorscheme githubdark]]
 <
 
 
-To enable the `TokyoNight` theme for `Lualine` , simply specify it in your
+To enable the `GithubDark` theme for `Lualine` , simply specify it in your
 lualine settings:
 
 >
     require('lualine').setup {    
       options = {    
         -- ... your lualine config    
-        theme = 'tokyonight'    
+        theme = 'githubdark'    
         -- ... your lualine config    
       }    
     }
 <
 
 
-To enable the `tokyonight` colorscheme for `Lightline` :
+To enable the `githubdark` colorscheme for `Lightline` :
 
 >
     " Vim Script    
-    let g:lightline = {'colorscheme': 'tokyonight'}
+    let g:lightline = {'colorscheme': 'githubdark'}
 <
 
 
 ==============================================================================
-10. ⚙️ Configuration                *tokyonight.nvim-⚙️-configuration*
+10. ⚙️ Configuration                *githubdark.nvim-⚙️-configuration*
 
 
 ❗️ configuration needs to be set **BEFORE** loading the color scheme with
-`colorscheme tokyonight`
+`colorscheme githubdark`
 The theme comes in three styles, `storm` , a darker variant `night` and `day`.
 The **day** style will be used if:
-- `vim.g.tokyonight_style == "day"`
+- `vim.g.githubdark_style == "day"`
 - or `vim.o.background == "light"`
  Option                              
  Default   
@@ -134,7 +133,7 @@ The **day** style will be used if:
 -----------------------------------
 ---------
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
- tokyonight_style                    
+ githubdark_style                    
  
 "storm"
  
@@ -145,39 +144,39 @@ night
  and 
 day
 .                                                                                   
- tokyonight_terminal_colors          
+ githubdark_terminal_colors          
  
 true
     
  Configure the colors used when opening a 
 :terminal
  in Neovim                                                                                                  
- tokyonight_italic_comments          
+ githubdark_italic_comments          
  
 true
     
  Make comments italic                                                                                                                                            
- tokyonight_italic_keywords          
+ githubdark_italic_keywords          
  
 true
     
  Make keywords italic                                                                                                                                            
- tokyonight_italic_functions         
+ githubdark_italic_functions         
  
 false
    
  Make functions italic                                                                                                                                           
- tokyonight_italic_variables         
+ githubdark_italic_variables         
  
 false
    
  Make variables and identifiers italic                                                                                                                           
- tokyonight_transparent              
+ githubdark_transparent              
  
 false
    
  Enable this to disable setting the background color                                                                                                             
- tokyonight_hide_inactive_statusline 
+ githubdark_hide_inactive_statusline 
  
 false
    
@@ -186,38 +185,38 @@ StatusLine
  and 
 LuaLine
 . 
- tokyonight_sidebars                 
+ githubdark_sidebars                 
  
 {}
       
  Set a darker background on sidebar-like windows. For example: 
 ["qf", "vista_kind", "terminal", "packer"]
                                                       
- tokyonight_dark_sidebar             
+ githubdark_dark_sidebar             
  
 true
     
  Sidebar like windows like 
 NvimTree
  get a darker background                                                                                                    
- tokyonight_dark_float               
+ githubdark_dark_float               
  
 true
     
  Float windows like the lsp diagnostics windows get a darker background.                                                                                         
- tokyonight_colors                   
+ githubdark_colors                   
  
 {}
       
  You can override specific color groups to use other groups or a hex color                                                                                       
- tokyonight_day_brightness           
+ githubdark_day_brightness           
  
 0.3
      
  Adjusts the brightness of the colors of the 
 Day
  style. Number between 0 and 1, from dull to vibrant colors                                                  
- tokyonight_lualine_bold             
+ githubdark_lualine_bold             
  
 false
    
@@ -227,32 +226,32 @@ true
 
 >
     -- Example config in Lua    
-    vim.g.tokyonight_style = "night"    
-    vim.g.tokyonight_italic_functions = true    
-    vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }    
+    vim.g.githubdark_style = "night"    
+    vim.g.githubdark_italic_functions = true    
+    vim.g.githubdark_sidebars = { "qf", "vista_kind", "terminal", "packer" }    
     
     -- Change the "hint" color to the "orange" color, and make the "error" color bright red    
-    vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }    
+    vim.g.githubdark_colors = { hint = "orange", error = "#ff0000" }    
     
     -- Load the colorscheme    
-    vim.cmd[[colorscheme tokyonight]]
+    vim.cmd[[colorscheme githubdark]]
 <
 
 
 
 >
     " Example config in VimScript    
-    let g:tokyonight_style = "night"    
-    let g:tokyonight_italic_functions = 1    
-    let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]    
+    let g:githubdark_style = "night"    
+    let g:githubdark_italic_functions = 1    
+    let g:githubdark_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]    
     
     " Load the colorscheme    
-    colorscheme tokyonight
+    colorscheme githubdark
 <
 
 
 ==============================================================================
-11. Making `undercurls` work properly in **Tmux***tokyonight.nvim-making-`undercurls`-work-properly-in-**tmux***
+11. Making `undercurls` work properly in **Tmux***githubdark.nvim-making-`undercurls`-work-properly-in-**tmux***
 
 
 To have undercurls show up and in color, add the following to your **Tmux**
@@ -267,7 +266,7 @@ config file:
 
 
 ==============================================================================
-12. 🍭 Extras                                  *tokyonight.nvim-🍭-extras*
+12. 🍭 Extras                                  *githubdark.nvim-🍭-extras*
 
 
 Extra color configs for **Kitty** , **Alacritty** , **Fish** , **WezTerm** and
@@ -276,14 +275,14 @@ respective documentation.
 
 ![image](https://user-images.githubusercontent.com/292349/115395546-d8d6f880-a198-11eb-98fb-a1194787701d.png)
 ==============================================================================
-13. 🔥 Contributing                      *tokyonight.nvim-🔥-contributing*
+13. 🔥 Contributing                      *githubdark.nvim-🔥-contributing*
 
 
 Pull requests are welcome. For the `extras` , we use a simple template system
 that can be used to generate themes for the different styles.
 How to add a new extra template:
-1. create a file like `lua/tokyonight/extra/cool-app.lua`
-2. add the name and output file extension to the `extras` table in `lua/tokyonight/extra/init.lua`
-3. in the root directory, run `$ lua lua/tokyonight/extra/init.lua` to generate / update extra themes
+1. create a file like `lua/githubdark/extra/cool-app.lua`
+2. add the name and output file extension to the `extras` table in `lua/githubdark/extra/init.lua`
+3. in the root directory, run `$ lua lua/githubdark/extra/init.lua` to generate / update extra themes
 4. commit the newly created themes under `extra/`
 vim:tw=78:ts=8:ft=help:norl:
